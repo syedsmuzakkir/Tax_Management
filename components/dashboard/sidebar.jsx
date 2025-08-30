@@ -132,8 +132,8 @@ export function Sidebar({ currentUser, onLogout, isCollapsed, onToggleCollapse }
   const urlActive = pathname?.startsWith("/dashboard/") ? pathname.split("/").pop() : "overview"
   const active = urlActive || "overview"
   const returnStatuses = [
-    "Initial Request",
-    "Document Verified",
+    // "Initial Request",
+    // "Document Verified",
     "In Preparation",
     "In Review",
     "Ready to File",

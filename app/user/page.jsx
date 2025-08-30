@@ -37,7 +37,9 @@ import {
 export default function UserDashboard() {
   const { currentUser, taxReturns, invoices, activityLogs, addTaxReturn, addComment, processPayment, addDocument } =
     useTaxation()
-
+ if (!currentUser) {
+    return <div>Loading...</div> // Or a proper loading component
+  }
   const [activeTab, setActiveTab] = useState("returns")
   const [isNewReturnModalOpen, setIsNewReturnModalOpen] = useState(false)
   const [isCommentModalOpen, setIsCommentModalOpen] = useState(false)

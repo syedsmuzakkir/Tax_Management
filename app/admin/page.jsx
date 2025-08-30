@@ -59,6 +59,9 @@ export default function AdminDashboard() {
     switchUserRole,
   } = useTaxation()
 
+   if (!currentUser) {
+    return <div>Loading...</div> // Or a proper loading component
+  }
   const [activeTab, setActiveTab] = useState("users")
   const [searchTerm, setSearchTerm] = useState("")
 
